@@ -11,29 +11,26 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  # We skip for PPC64 and s390x since the dotnet binaries for this architecture aren't available.
+  skip: True # [ppc64le or s390x]
+  skip: True # [py<37]
 
 requirements:
-  build:
-    - dotnet-sdk
   host:
+    - python
     - pip
-    - python >=3.7,<3.12
-    - setuptools >=61
+    - setuptools
+    - setuptools_scm
     - wheel
+    - toml
   run:
     - clr_loader >=0.2.2,<0.3.0
-    - python >=3.7,<3.12
+    - python
 
 test:
-  imports:
-    - clr
   requires:
-    - dotnet-runtime
-    - importlib_resources
     - pip
-    - mono
+    - importlib_resources
   commands:
     - pip check
 
@@ -44,12 +41,14 @@ about:
   license_file: LICENSE
   summary: .Net and Mono integration for Python
   description: |
-    Python for .NET is a package that gives Python programmers nearly seamless integration with the
-     .NET Common Language Runtime (CLR) and provides a powerful application scripting tool for .NET
+      Python for .NET is a package that gives Python programmers nearly seamless integration with the
+      .NET Common Language Runtime (CLR) and provides a powerful application scripting tool for .NET
       developers.
   dev_url: https://github.com/pythonnet/pythonnet
+  doc_url: https://pythonnet.github.io/pythonnet/
 
 extra:
   recipe-maintainers:
     - m-rossi
     - bgruening
+    - sumit0190
