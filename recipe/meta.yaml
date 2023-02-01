@@ -35,7 +35,7 @@ test:
     - pip check
 
 about:
-  home: http://pythonnet.github.io
+  home: https://pythonnet.github.io
   license: MIT
   license_family: MIT
   license_file: LICENSE
