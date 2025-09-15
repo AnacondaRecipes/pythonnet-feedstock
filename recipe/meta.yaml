@@ -11,8 +11,6 @@ source:
 
 build:
   number: 0
-  # We skip for PPC64 and s390x since the dotnet binaries for this architecture aren't available.
-  skip: True # [ppc64le or s390x]
   skip: True # [py<37]
 
 requirements:
