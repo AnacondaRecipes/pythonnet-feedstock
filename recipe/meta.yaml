@@ -44,7 +44,7 @@ about:
       .NET Common Language Runtime (CLR) and provides a powerful application scripting tool for .NET
       developers.
   dev_url: https://github.com/pythonnet/pythonnet
-  doc_url: https://pythonnet.github.io/pythonnet/
+  doc_url: https://pythonnet.github.io/pythonnet
 
 extra:
   recipe-maintainers:
