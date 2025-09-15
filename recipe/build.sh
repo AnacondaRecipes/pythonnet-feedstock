@@ -6,4 +6,4 @@ export PATH="$BUILD_PREFIX/dotnet:$PATH"
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 # Now install the package.
-$PYTHON -m pip install . --no-deps -vv
+$PYTHON -m pip install . --no-deps --no-build-isolation -vv

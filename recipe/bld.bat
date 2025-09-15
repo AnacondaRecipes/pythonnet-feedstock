@@ -10,6 +10,6 @@ powershell %BUILD_PREFIX%\dotnet-install.ps1 -InstallDir %BUILD_PREFIX%\dotnet-%
 set PATH=%BUILD_PREFIX%\dotnet-%suffix%;%PATH%
 
 REM Now install the package
-%PYTHON% -m pip install . --no-deps -vv
+%PYTHON% -m pip install . --no-deps --no-build-isolation -vv
 REM Remember to shutdown the build server so that future builds aren't affected.
 dotnet build-server shutdown
