@@ -17,12 +17,13 @@ requirements:
   host:
     - python
     - pip
-    - setuptools >=61
+    - setuptools >=80
+    - packaging >=24
+    - pyproject-parser >=0.14
     - setuptools_scm
-    - wheel
     - toml
   run:
-    - clr_loader >=0.2.7,<0.3.0
+    - clr_loader >=0.3.1,<0.4.0
     - python
 
 test:
