@@ -5,7 +5,7 @@ except ImportError:
 
 # Check if DLL exist
 base_path = resources_files('pythonnet') / 'runtime'
-for ext in ['deps.json', 'dll']:
+for ext in ['deps.json', 'dll', 'xml']:
     if not (base_path / f'Python.Runtime.{ext}').exists():
         raise FileNotFoundError(f'DLL runtime/Python.Runtime.{ext} not found in package.')
 print("DLLs found; test passed.")
