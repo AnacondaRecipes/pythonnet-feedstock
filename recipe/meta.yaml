@@ -20,7 +20,6 @@ requirements:
     - setuptools >=80
     - packaging >=24
     - pyproject-parser >=0.14
-    - setuptools_scm
     - toml
   run:
     - clr_loader >=0.3.1,<0.4.0
